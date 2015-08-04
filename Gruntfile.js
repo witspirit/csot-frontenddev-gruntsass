@@ -5,6 +5,11 @@ module.exports = function(grunt) {
         dev : ['build','dist'],
         full : ['build', 'dist', '.sass-cache', 'bower_components', 'node_modules']
     },
+    wiredep: {
+      html : {
+        src: ['app/*.html']
+      }
+    },
     jshint: {
       files: ['Gruntfile.js', 'app/**/*.js'],
       options: {
@@ -81,8 +86,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-wiredep');
 
 
-  grunt.registerTask('build', ['jshint', 'sass', 'uglify', 'cssmin', 'copy']);
+  grunt.registerTask('build', ['wiredep','jshint', 'sass', 'uglify', 'cssmin', 'copy']);
   grunt.registerTask('default', ['clean:dev', 'build', 'watch']);
 };
