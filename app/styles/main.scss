@@ -1,0 +1,31 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "variables";
+@import "mixins";
+
+.header {
+  a {
+    color: $primary-color;
+  }
+
+  li.active a {
+    background-color: $secondary-color;
+  }
+}
+
+.jumbotron {
+  font-family: $header-font;
+  text-align: center;
+  margin-bottom: 5px;
+
+  :hover {
+    @include transition(color 2s);
+    color : $tertiary-color;
+  }
+}
+
+.math {
+  background-color: $tertiary-color;
+  height: $navbar-height / 10;
+}

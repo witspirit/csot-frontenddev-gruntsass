@@ -1,0 +1,16 @@
+{
+  "name": "grunt_sass_workshop",
+  "version": "1.0.0",
+  "description": "C SoT Workshop to get familiar with grunt and sass",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
